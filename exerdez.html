@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="ipt_saldo" type="text">
+    <button onclick="CalcularSaldo()"> Saldo</button>
+    <div id="div_mens"> </div>
+</body>
+</html>
+
+<script>
+    function CalcularSaldo() {
+        var saldar = Number(ipt_saldo.value)
+        
+        if (saldar > 5000) {
+            div_mens.innerHTML = `é investidor${saldar}`
+        } else if(saldar > 2000){
+            div_mens.innerHTML = `Acima da média ${saldar}`
+        }else if(saldar < 0) { 
+            div_mens.innerHTML = `É devedor ${saldar} `
+        }else{ 
+        div_mens = `É normal${saldar}`
+        }
+    }
+</script>
